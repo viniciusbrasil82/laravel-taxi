@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "5fc98705-958e-42da-bcf1-473c4c619404",
+		"name": "TesteTaxi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6989512"
+	},
+	"item": [
+		{
+			"name": "Registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/register?name=Adm&email=adm@adm.com&password=awef&c_password=awef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Adm"
+						},
+						{
+							"key": "email",
+							"value": "adm@adm.com"
+						},
+						{
+							"key": "password",
+							"value": "awef"
+						},
+						{
+							"key": "c_password",
+							"value": "awef"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/login?email=adm@adm.com&password=awef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "adm@adm.com"
+						},
+						{
+							"key": "password",
+							"value": "awef"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelaCorrida",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|NrgvO0pozTcczCQCIde88r2JBpQCaHvo2dt29Gswaa3a92a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/corrida/cancelar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"corrida",
+						"cancelar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CriaCorrida",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|NrgvO0pozTcczCQCIde88r2JBpQCaHvo2dt29Gswaa3a92a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/corrida/criar?ini_lat=123,123&ini_lng=123,123&end_lat=123,123&end_lng=123,123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"corrida",
+						"criar"
+					],
+					"query": [
+						{
+							"key": "ini_lat",
+							"value": "123,123"
+						},
+						{
+							"key": "ini_lng",
+							"value": "123,123"
+						},
+						{
+							"key": "end_lat",
+							"value": "123,123"
+						},
+						{
+							"key": "end_lng",
+							"value": "123,123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
